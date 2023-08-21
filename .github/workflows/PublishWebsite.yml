@@ -1,0 +1,29 @@
+# this is  github actions configuration file
+name: publish-website
+run-name: ${{ github.actor }} is running publish-website
+on:
+  push:
+    branches:
+      - main
+      - git-action
+jobs:
+  checkout-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Use Pnpm Package Management
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: false
+      - run: pnpm install
+      - run: pnpm build
+  # deployment:
+  #   runs-on: ubuntu-latest
+  #   environment: production
+  #   steps:
+  #     - name: deploy

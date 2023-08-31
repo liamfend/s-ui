@@ -16,7 +16,10 @@ module.exports = {
   '**/*.{js,ts,jsx,tsx}': async (files) => {
     const filesToLint = await removeIgnoredFiles(files)
 
-    return [`eslint -c .eslintrc.yml --max-warnings=0 --fix ${filesToLint}`]
+    return [
+      `prettier --config .prettierrc.json --ignore-path --write ${filesToLint}`,
+      `eslint -c .eslintrc.yml --max-warnings=0 --fix ${filesToLint}`,
+    ]
   },
   '**/*.css': async (files) => {
     const filesToLint = await removeIgnoredFiles(files)

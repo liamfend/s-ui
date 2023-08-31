@@ -1,0 +1,50 @@
+{
+  "name": "@student-ui/button",
+  "version": "2.0.0",
+  "description": "this is base buttoon",
+  "keywords": [
+    "button"
+  ],
+  "author": "Liam Li <Liam.li.dev@gmail.com>",
+  "homepage": "https://liamdev.top",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liamfend/s-ui.git",
+    "directory": "packages/components/button"
+  },
+  "bugs": {
+    "url": "https://github.com/liamfend/s-ui/issues"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "build:fast": "tsup src",
+    "dev": "yarn build:fast -- --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "dependencies": {
+    "@student-ui/system": "workspace:*",
+    "@student-ui/theme": "workspace:*",
+    "@student-ui/shared-utils": "workspace:*",
+    "@student-ui/react-utils": "workspace:*"
+  },
+  "devDependencies": {
+    "clean-package": "2.2.0",
+    "react": "^18.0.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

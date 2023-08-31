@@ -9,6 +9,9 @@
     "prepare": "husky install",
     "format:check": "prettier --check packages/**/**/src --cache",
     "format:write": "prettier --write packages/**/**/src --cache",
+    "create:cmp": "plop component",
+    "create:pkg": "plop package",
+    "create:hook": "plop hook",
     "lint": "lint-staged"
   },
   "dependencies": {
@@ -29,6 +32,7 @@
     "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
+    "plop": "^3.1.2",
     "prettier": "2.8.7",
     "typescript": "^5.0.4",
     "vite": "^4.2.0"

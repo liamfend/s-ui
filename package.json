@@ -34,6 +34,9 @@
     "lint-staged": "^13.2.0",
     "plop": "^3.1.2",
     "prettier": "2.8.7",
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "commitlint-plugin-function-rules": "^1.7.1",
     "typescript": "^5.0.4",
     "vite": "^4.2.0"
   },

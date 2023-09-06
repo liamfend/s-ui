@@ -15,7 +15,7 @@ coverage
 build
 !.storybook
 /**/.storybook/**
-!.commitlintrc.cjs
+.commitlintrc.cjs
 !.lintstagedrc.cjs
 !jest.config.js
 !plopfile.js
